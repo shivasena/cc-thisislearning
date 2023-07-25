@@ -58,6 +58,6 @@ That's it! Your changes will be reviewed, and upon approval, they will be automa
 
 If you have any questions or encounter any issues, please don't hesitate to reach out.
 
-- Email: learning@confederationcollege.ca
+- Email: mkoval@confederationcollege.ca
 
 Happy coding! 💻✨
