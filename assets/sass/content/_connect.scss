@@ -1,0 +1,79 @@
+﻿// connect
+#connect {
+	padding: 1.5rem $content-gutter 0;
+
+	&-message {
+		margin: 0 (-$content-gutter);
+		padding: 3rem $content-gutter;
+		color: #fff;
+		background: #005983;
+		font-weight: 400;
+		line-height: 1.1;
+
+		.highlight {
+			color: $yellow;
+		}
+	}
+
+	h3 {
+		color: $blue;
+	}
+
+	a {
+		text-transform: uppercase;
+		color: $blue;
+		text-decoration: none;
+	}
+
+	p {
+		color: #005983;
+	}
+}
+
+.recruiters {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$content-gutter;
+	margin-right: -$content-gutter;
+}
+
+.recruiter {
+	width: 50%;
+	padding: $content-gutter;
+
+	@media (min-width: 768px) {
+		width: 33.33333333334%;
+		text-align: center;
+	}
+
+	&-thumb {
+		img {
+			max-width: 100%;
+			width: auto;
+
+			@media (min-width: 768px) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	&-name,
+	&-title {
+		display: block;
+		color: #005983;
+	}
+
+	&-name {
+		margin-top: .5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 24px;
+	}
+
+	&-title {
+		font-size: 1em;
+		text-transform: uppercase;
+
+	}
+}

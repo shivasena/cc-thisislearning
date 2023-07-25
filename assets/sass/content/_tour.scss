@@ -1,0 +1,55 @@
+﻿// tour
+#tour {
+	&-panel {
+		color: #fff;
+		background: #005983;
+
+		&-header {
+			margin: 0;
+		}
+
+		&-title {
+			padding: 1.5rem $content-gutter;
+
+			.fas {
+				color: #005983;
+				background: #fff;
+			}
+
+			&[aria-expanded="true"] {
+				.fas {
+					background: #fff;
+				}
+			}
+		}
+
+		a {
+			color: $blue;
+			text-decoration: none;
+			font-weight: 700;
+
+
+			&.highlight {
+				color: #00b7e5;
+				font-weight: bold;
+			}
+		}
+
+		&-content {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			max-height: 0px;
+			opacity: 0;
+			pointer-events: none;
+			margin-top: -20px;
+			transition: 0.25s ease-in-out;
+
+			&.visible {
+				max-height: 30em;
+				opacity: 1;
+				pointer-events: all;
+				padding-bottom: 1rem;
+			}
+		}
+	}
+}

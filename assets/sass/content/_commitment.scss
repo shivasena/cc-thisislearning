@@ -1,0 +1,39 @@
+﻿// commitment
+#commitment {
+	&-panel {
+		color: #fff;
+		background-image: linear-gradient(135deg, $blue-dark 50%, darken($blue, 20%));
+
+		&-header {
+			margin: 0;
+		}
+
+		&-title {
+			padding: 1.5rem $content-gutter;
+
+			.fas {
+				color: $blue-dark;
+				background: #fff;
+			}
+
+			&[aria-expanded="true"] {
+				.fas {
+					background: $blue;
+				}
+			}
+		}
+
+		&-content {
+			padding: 0 $content-gutter 1rem;
+
+			strong,
+			a {
+				color: $yellow;
+			}
+
+			a {
+				font-weight: 700;
+			}
+		}
+	}
+}

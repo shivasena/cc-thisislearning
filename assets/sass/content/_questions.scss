@@ -1,0 +1,71 @@
+﻿// questions
+#questions {
+	padding: $content-gutter $content-gutter ($content-gutter * 2);
+
+	&-image {
+		padding: 3rem;
+		color: #fff;
+		font-size: 10vh;
+		font-weight: 800;
+		text-align: center;
+		background-image: linear-gradient(135deg, $blue-dark, darken($blue, 15%));
+
+		.highlight {
+			font-size: 15vh;
+			color: $blue;
+		}
+	}
+
+	&-panel {
+		border-bottom: 4px solid $blue-dark;
+
+		&-header {
+			margin: 0;
+		}
+
+		&-title {
+			padding: 1.5rem 0;
+			color: $blue;
+
+			.fas {
+				color: #fff;
+				background: $blue;
+			}
+
+			&[aria-expanded="true"] {
+				.fas {
+					color: #fff;
+					background: $blue-dark;
+				}
+			}
+		}
+
+		&-content {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			max-height: 0px;
+			opacity: 0;
+			pointer-events: none;
+			margin-top: -20px;
+			transition: 0.25s ease-in-out;
+
+			&.visible {
+				max-height: 30em;
+				opacity: 1;
+				pointer-events: all;
+				padding-bottom: 1.5rem;
+			}
+
+			a {
+				color: $blue;
+				text-decoration: none;
+				font-weight: 700;
+
+				&.highlight {
+					text-transform: uppercase;
+					color: $blue;
+				}
+			}
+		}
+	}
+}

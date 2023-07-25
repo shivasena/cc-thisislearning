@@ -1,0 +1,95 @@
+﻿// galleries
+#galleries {
+	h2 {
+		margin: 0;
+		padding: 1rem $content-gutter;
+		color: #fff;
+		background: $blue-dark;
+
+		strong {
+			color: $blue;
+		}
+	}
+
+	&-content {
+		padding: $content-gutter;
+		color: $blue-dark;
+		font-weight: bold;
+	}
+
+	.flickity-button {
+		&:hover {
+			.flickity-button-icon {
+				fill: rgba(0,0,0,0.34);
+			}
+		}
+
+		&-icon {
+			fill: #fff;
+		}
+	}
+}
+
+.gallery {
+	position: relative;
+	margin-bottom: $content-gutter * 2;
+
+	a {
+		display: block;
+		position: relative;
+
+		&::before {
+			z-index: 4;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	h3 {
+		z-index: 3;
+		position: absolute;
+		left: 0;
+		top: .5rem;
+		padding: .5rem $content-gutter;
+		font-size: .875em;
+		font-weight: 400;
+		color: #fff;
+		background: $blue;
+		text-transform: uppercase;
+	}
+
+	&-items {
+		padding-left: 1rem;
+	}
+
+	&-item {
+		flex: 0 0 auto;
+		position: relative;
+		margin: 0 .25rem;
+		width: 85vw;
+		max-width: 450px;
+
+		figcaption {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 5rem $content-gutter $content-gutter;
+			color: #fff;
+			background: linear-gradient(rgba(0,0,0,0), #000 80%);
+			font-size: .75em;
+
+			strong {
+				display: block;
+			}
+
+			.fas {
+				color: $blue;
+			}
+		}
+	}
+}

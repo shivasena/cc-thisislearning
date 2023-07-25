@@ -1,0 +1,61 @@
+﻿// appointment
+#appointment {
+	padding: 0 $content-gutter 3rem;
+
+	&::after {
+		content: '';
+		display: block;
+		border-bottom: 4px solid $blue-dark;
+	}
+
+	&-panel {
+		&-header {
+			margin: 0;
+			color: $blue;
+		}
+
+		&-title {
+			padding: 1.5rem 0;
+
+			.fas {
+				color: #fff;
+				background: $blue;
+			}
+
+			&[aria-expanded="true"] {
+				.fas {
+					background: $blue-dark;
+				}
+			}
+		}
+
+		&-content {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			max-height: 0px;
+			opacity: 0;
+			pointer-events: none;
+			margin-top: -20px;
+			transition: 0.25s ease-in-out;
+
+			&.visible {
+				max-height: 30em;
+				opacity: 1;
+				pointer-events: all;
+				padding-bottom: 1.5rem;
+			}
+
+			a {
+				color: $blue;
+				text-decoration: none;
+				text-transform: none;
+				font-weight: bold;
+
+				&:hover,
+				&:focus {
+					color: darken($blue, 10%);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,211 @@
+﻿:root {
+	font-size: 1em;
+	color: $blue-dark;
+
+	@media (min-width: 768px) {
+		font-size: 1.25rem;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+// main document
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Sora', sans-serif;
+}
+
+main {
+	display: block;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 100px rgba(0,0,0,0.25);
+}
+
+
+// headings
+h1 {
+	font-size: $font-size-h1;
+}
+
+h2 {
+	font-size: $font-size-h2;
+}
+
+h3 {
+	font-size: $font-size-h3;
+}
+
+h4 {
+	font-size: $font-size-h4;
+}
+
+h5 {
+	font-size: $font-size-h5;
+}
+
+
+// images
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+// text
+.text-caps {
+	text-transform: uppercase;
+}
+
+
+// screen readers
+.sr-only {
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+// buttons
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	padding: .75em 1.25em;
+	border-radius: .75em;
+	text-decoration: none;
+	transition: .25s;
+	font-size: .9em;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	&--blue {
+		color: #fff;
+		background: $blue;
+
+		&:hover,
+		&:focus {
+			color: $blue-dark;
+			background: $yellow;
+		}
+	}
+}
+
+
+// text colors
+.text-blue {
+	color: $blue;
+}
+
+.text-blue-dark {
+	color: $blue-dark;
+}
+
+.text-yellow {
+	color: $yellow;
+}
+
+.text-green {
+	color: $green;
+}
+
+.text-pink {
+	color: $pink;
+}
+
+.text-orange {
+	color: $orange;
+}
+
+
+
+// panels
+.panel-toggle {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	width: 100%;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	background: transparent;
+	border: 0;
+	text-align: inherit;
+	cursor: pointer;
+	outline: none;
+
+	.fas {
+		flex: 0 0 auto;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 1em;
+		width: 1.5em;
+		height: 1.5em;
+		font-size: .75em;
+		transition: .25s;
+		border-radius: 50%;
+		/*@media (min-width: 768px) {
+			display: none !important;
+		}*/
+	}
+
+	&[aria-expanded="true"] {
+		.fas {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.panel-content {
+	/*@media (min-width: 768px) {
+		display: block!important;
+	}*/
+}
+
+
+.flickity-button {
+	background: transparent;
+
+	&:disabled {
+		display: none;
+	}
+}
+
+#jump-back {
+	padding: 1rem 1rem 2rem;
+	
+}
+
+#jump-back h2{
+
+	color: $blue-dark;
+	text-decoration: none;
+	padding-bottom: 1em;
+	border-bottom: 4px solid #005983;
+}
+
+
+#jump-back a {
+	text-decoration: none;
+}

@@ -1,0 +1,67 @@
+﻿// apply
+#apply {
+	position: relative;
+
+	&-image {
+		width: 100%;
+
+		@media (min-width: 768px) {
+			height: 75vh;
+		}
+
+		img {
+			@media (min-width: 768px) {
+				height: 75vh;
+				object-fit: cover;
+				object-position: center top;
+			}
+		}
+	}
+
+	&-content {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: $content-gutter $content-gutter 0;
+		color: $blue-dark;
+		background: #fff;
+
+		a {
+			display: inline-block;
+			margin-bottom: -1em;
+			padding: .25em 1em;
+			color: #fff;
+			background: $blue;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 2em;
+			font-weight: 600;
+			transform: scale(1.2) rotate(-4deg);
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				animation: shake 1s;
+				backface-visibility: hidden;
+			}
+		}
+	}
+}
+
+@keyframes shake {
+	10%, 90% {
+		transform: scale(1.25) rotate(-3deg);
+	}
+
+	20%, 80% {
+		transform: scale(1.3) rotate(-2deg);
+	}
+
+	30%, 50%, 70% {
+		transform: scale(1.35) rotate(-3deg);
+	}
+
+	40%, 60% {
+		transform: scale(1.3) rotate(-3.5deg);
+	}
+}
